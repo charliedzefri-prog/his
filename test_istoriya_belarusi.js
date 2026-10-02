@@ -1,4 +1,9 @@
 let activeTab = 1;
+function setTheme(t){
+  document.body.dataset.theme = t;
+  try{ localStorage.setItem("hb-theme", t); }catch(e){}
+}
+
 let checked = {1:false, 2:false, 3:false};
 let lastData = {1:[], 2:[], 3:[]};
 const tabTitles = {1:"Вкладка 1 · Тест 45 вопросов", 2:"Вкладка 2 · Новые 32 вопроса", 3:"Вкладка 3 · Даты (случайный вариант)"};
@@ -241,5 +246,7 @@ function copyReport(t){
 (function(){
   const m = (location.hash||"").match(/^#tab([123])$/);
   switchTab(m ? parseInt(m[1],10) : 1, false);
+  const ts = document.getElementById("themeSel");
+  if(ts) ts.value = document.body.dataset.theme || "light";
 })();
 
