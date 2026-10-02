@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тест по истории Беларуси — Первобытность и восточные славяне (45 вопросов)</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f1f3f7;color:#1c2330;margin:0;padding:0;line-height:1.55}
+.wrap{max-width:880px;margin:0 auto;padding:16px 14px 60px}
+header.top{background:linear-gradient(135deg,#1a3a6b,#2f62b0);color:#fff;border-radius:14px;padding:22px 20px;margin:14px 0 16px}
+header.top h1{margin:0 0 8px;font-size:21px}
+header.top p{margin:4px 0;font-size:14px;opacity:.95}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:2px 10px;border-radius:20px;font-size:12px;margin:2px 4px 2px 0}
+.toolbar{position:sticky;top:0;z-index:50;background:#fff;border:1px solid #dde3ec;border-radius:12px;padding:10px 12px;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 10px rgba(20,40,80,.07)}
+.progress{font-size:13px;font-weight:600;color:#2f62b0;margin-right:auto}
+button{cursor:pointer;border:none;border-radius:10px;padding:11px 16px;font-size:14px;font-weight:700}
+.btn-check{background:#1f9d55;color:#fff}
+.btn-check:hover{background:#178244}
+.btn-dl{background:#2f62b0;color:#fff}
+.btn-dl:hover{background:#234c8c}
+.btn-dl2{background:#6b7689;color:#fff}
+.btn-reset{background:#eef1f6;color:#333;border:1px solid #d5dbe5}
+.q{background:#fff;border:1px solid #dde3ec;border-radius:12px;padding:16px 14px;margin:12px 0}
+.q h3{margin:0 0 8px;font-size:16px}
+.q .meta{font-size:12px;color:#6b7689;margin-bottom:8px}
+.q .meta span{background:#eef2f9;color:#2f62b0;border-radius:6px;padding:1px 8px;font-weight:700}
+label.opt{display:flex;gap:10px;align-items:flex-start;background:#f8fafd;border:1px solid #e2e8f2;border-radius:10px;padding:9px 10px;margin:7px 0;cursor:pointer;font-size:14.5px}
+label.opt:hover{border-color:#2f62b0}
+label.opt input{margin-top:3px;transform:scale(1.2)}
+input[type=text]{width:100%;padding:11px 12px;font-size:15px;border:2px solid #c9d4e6;border-radius:10px}
+.matchrow{display:flex;gap:10px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.matchrow .left{flex:1;min-width:220px;font-size:14px;background:#f8fafd;border:1px solid #e2e8f2;border-radius:10px;padding:8px 10px}
+.matchrow select{padding:10px;font-size:14px;border:2px solid #c9d4e6;border-radius:10px;min-width:170px}
+.q.correct{border:2px solid #1f9d55;background:#f3fbf6}
+.q.incorrect{border:2px solid #e04040;background:#fff5f5}
+.verdict{display:none;margin-top:10px;border-radius:10px;padding:10px 12px;font-size:14px}
+.q.correct .verdict{display:block;background:#e1f5e9;border:1px solid #1f9d55}
+.q.incorrect .verdict{display:block;background:#fdecec;border:1px solid #e04040}
+.results{display:none;background:#fff;border:2px solid #2f62b0;border-radius:14px;padding:18px 16px;margin:18px 0}
+.results.show{display:block}
+.results h2{margin:0 0 8px;font-size:19px}
+.score{font-size:17px;font-weight:800}
+table.mini{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+table.mini th,table.mini td{border:1px solid #d5dbe5;padding:6px;text-align:left;vertical-align:top}
+table.mini th{background:#eef2f9}
+pre.report{background:#0f1b2d;color:#d8e6ff;border-radius:12px;padding:14px;font-size:12.5px;white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto;display:none}
+.hint{font-size:13px;color:#5a6a85;background:#fff;border:1px dashed #9fb2d3;border-radius:10px;padding:10px 12px;margin:12px 0}
+footer{font-size:12px;color:#7a8aa5;text-align:center;margin-top:20px}
+@media(max-width:560px){header.top h1{font-size:18px}button{width:100%}.toolbar{gap:6px}}
+.tabbar{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+.tabbtn{flex:1;min-width:230px;background:#e8edf5;color:#2f62b0;border:2px solid #c4d0e6}
+.tabbtn.on{background:#2f62b0;color:#fff;border-color:#2f62b0}
+section[hidden]{display:none}
+.ord{background:#f8fafd;border:1px solid #e2e8f2;border-radius:10px;padding:8px 10px;margin:6px 0;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>📜 История Беларуси — общий тест: Первобытность и восточные славяне</h1>
+<p>77 вопросов в двух вкладках: ЦТ 2011–2020 + сборник (Часть А/В) и Решу ЦТ. Темы: первобытность, славяне, Полоцк и Туров, феодализм.</p>
+<div>
+<span class="badge">Вкладка 1: 45 вопросов</span><span class="badge">Вкладка 2: 32 вопроса</span>
+<span class="badge">выбор ответа + вписать слово + соответствия</span>
+<span class="badge">проверка + скачивание результатов</span>
+</div>
+</header>
+
+<div class="toolbar">
+<span class="progress" id="progress">Вкладка 1 — отвечено: 0 / 45</span>
+<button class="btn-check" onclick="checkTest(activeTab)">✅ Проверить</button>
+<button class="btn-dl" onclick="downloadResults(activeTab)">⬇️ Скачать результаты</button>
+<button class="btn-reset" onclick="resetTest(activeTab)">↺ Сбросить</button>
+</div>
+
+<div class="hint">
+<b>Как пользоваться:</b> отвечайте на вопросы прямо здесь. Если кнопки «Проверить» / «Скачать» работают (открыто в браузере) — нажмите <b>«Проверить»</b>, увидите балл и разбор, затем <b>«Скачать результаты»</b> (файл с вопросами, вашими ответами и пометками ✅/❌ + правильные ответы).<br>
+Если кнопки не работают (предпросмотр файла) — <b>скачайте 2 файла: этот HTML + test_istoriya_belarusi.js в одну папку</b> и откройте HTML в браузере (Safari/Chrome) — всё заработает. А сверить ответы можно вручную по ключу внизу 👇
+</div>
+<noscript>
+<div class="hint" style="border-color:#e04040;background:#fff5f5"><b>⚠️ Проверка кнопками здесь недоступна</b> (предпросмотр без JavaScript). Отвечайте письменно, а сверяйтесь с ключом ответов внизу страницы. Для автопроверки и скачивания результатов откройте файл в браузере вместе с файлом <b>test_istoriya_belarusi.js</b>.</div>
+</noscript>
+
+<div class="tabbar">
+<button class="tabbtn on" id="tabbtn1" onclick="switchTab(1)">📝 Вкладка 1 · Тест 45 вопросов</button>
+<button class="tabbtn" id="tabbtn2" onclick="switchTab(2)">📚 Вкладка 2 · Новые 32 вопроса</button>
+</div>
+<section id="pane1">
+
+
+<!-- ================= ВОПРОСЫ ================= -->
+
+<div class="q" data-type="choice" data-n="1" data-orig="№1" data-correct="1" data-correct-text="2) началось использование железа">
+<h3>1. На территории Беларуси около VII в. до н.э.:</h3>
+<div class="meta"><span>Задание № 1</span> · демо ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q1" value="0"> 1) появился «человек разумный»</label>
+<label class="opt"><input type="radio" name="q1" value="1"> 2) началось использование железа</label>
+<label class="opt"><input type="radio" name="q1" value="2"> 3) появились первые города</label>
+<label class="opt"><input type="radio" name="q1" value="3"> 4) началось расселение индоевропейцев</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="2" data-orig="№51" data-correct="2" data-correct-text="3) собирательства">
+<h3>2. Земледелие у первобытных людей возникло из:</h3>
+<div class="meta"><span>Задание № 51</span> · ЦТ 2011</div>
+<label class="opt"><input type="radio" name="q2" value="0"> 1) бортничества</label>
+<label class="opt"><input type="radio" name="q2" value="1"> 2) охоты</label>
+<label class="opt"><input type="radio" name="q2" value="2"> 3) собирательства</label>
+<label class="opt"><input type="radio" name="q2" value="3"> 4) рыболовства</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="3" data-orig="№102" data-correct="0" data-correct-text="1) появился человек современного типа">
+<h3>3. Примерно 40—35 тыс. лет назад на территории Беларуси:</h3>
+<div class="meta"><span>Задание № 102</span> · ЦТ 2012</div>
+<label class="opt"><input type="radio" name="q3" value="0"> 1) появился человек современного типа</label>
+<label class="opt"><input type="radio" name="q3" value="1"> 2) появились железные орудия труда</label>
+<label class="opt"><input type="radio" name="q3" value="2"> 3) люди начали заниматься земледелием</label>
+<label class="opt"><input type="radio" name="q3" value="3"> 4) расселились индоевропейцы</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="4" data-orig="№151" data-correct="0" data-correct-text="1) родовая община">
+<h3>4. Сообществом людей каменного века являлась(-ось):</h3>
+<div class="meta"><span>Задание № 151</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q4" value="0"> 1) родовая община</label>
+<label class="opt"><input type="radio" name="q4" value="1"> 2) сословие</label>
+<label class="opt"><input type="radio" name="q4" value="2"> 3) народность</label>
+<label class="opt"><input type="radio" name="q4" value="3"> 4) нация</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="5" data-orig="№152" data-correct="2" data-correct-text="3) балтов">
+<h3>5. В бронзовом веке на значительной части территории Беларуси расселились племена:</h3>
+<div class="meta"><span>Задание № 152</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q5" value="0"> 1) кельтов</label>
+<label class="opt"><input type="radio" name="q5" value="1"> 2) скифов</label>
+<label class="opt"><input type="radio" name="q5" value="2"> 3) балтов</label>
+<label class="opt"><input type="radio" name="q5" value="3"> 4) германцев</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="6" data-orig="№251" data-correct="1" data-correct-text="2) важнейшие вопросы решало общее собрание родственников">
+<h3>6. В родовую(-ой) общину(-е) в каменном веке:</h3>
+<div class="meta"><span>Задание № 251</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q6" value="0"> 1) объединялись как родственники, так и люди, не связанные кровным родством</label>
+<label class="opt"><input type="radio" name="q6" value="1"> 2) важнейшие вопросы решало общее собрание родственников</label>
+<label class="opt"><input type="radio" name="q6" value="2"> 3) наделы земли принадлежали каждой отдельной семье</label>
+<label class="opt"><input type="radio" name="q6" value="3"> 4) все члены общины были связаны одной профессией</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="7" data-orig="№601" data-correct="2" data-correct-text="3) достижение совершенства в изготовлении каменных орудий труда">
+<h3>7. К бронзовому веку на территории Беларуси относится:</h3>
+<div class="meta"><span>Задание № 601</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q7" value="0"> 1) переход к оседлому образу жизни</label>
+<label class="opt"><input type="radio" name="q7" value="1"> 2) начало строительства городов</label>
+<label class="opt"><input type="radio" name="q7" value="2"> 3) достижение совершенства в изготовлении каменных орудий труда</label>
+<label class="opt"><input type="radio" name="q7" value="3"> 4) зарождение религиозных верований</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="8" data-orig="№651" data-correct="1" data-correct-text="2) сложными условиями жизни">
+<h3>8. Необходимость объединения первобытных людей в родовые общины объясняется:</h3>
+<div class="meta"><span>Задание № 651</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q8" value="0"> 1) созданием первых государств</label>
+<label class="opt"><input type="radio" name="q8" value="1"> 2) сложными условиями жизни</label>
+<label class="opt"><input type="radio" name="q8" value="2"> 3) ведением производительного хозяйства</label>
+<label class="opt"><input type="radio" name="q8" value="3"> 4) появлением религиозных верований</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="9" data-orig="№652" data-correct="1" data-correct-text="2) выборный руководитель рода или племени">
+<h3>9. В первобытном обществе старейшиной являлся:</h3>
+<div class="meta"><span>Задание № 652</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q9" value="0"> 1) руководитель княжеской дружины</label>
+<label class="opt"><input type="radio" name="q9" value="1"> 2) выборный руководитель рода или племени</label>
+<label class="opt"><input type="radio" name="q9" value="2"> 3) языческий священник</label>
+<label class="opt"><input type="radio" name="q9" value="3"> 4) крупный землевладелец</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="10" data-orig="№701" data-correct="0" data-correct-text="1) возникновению имущественного неравенства">
+<h3>10. Использование металлических орудий труда на территории Беларуси в древности способствовало:</h3>
+<div class="meta"><span>Задание № 701</span></div>
+<label class="opt"><input type="radio" name="q10" value="0"> 1) возникновению имущественного неравенства</label>
+<label class="opt"><input type="radio" name="q10" value="1"> 2) переходу к оседлому образу жизни</label>
+<label class="opt"><input type="radio" name="q10" value="2"> 3) переходу к материнскому роду</label>
+<label class="opt"><input type="radio" name="q10" value="3"> 4) зарождению религиозных верований</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="11" data-orig="№751" data-correct="3" data-correct-text="4) язычество">
+<h3>11. Определите название религиозных верований древних славян, основанных на почитании многих богов:</h3>
+<div class="meta"><span>Задание № 751</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q11" value="0"> 1) атеизм</label>
+<label class="opt"><input type="radio" name="q11" value="1"> 2) символизм</label>
+<label class="opt"><input type="radio" name="q11" value="2"> 3) примитивизм</label>
+<label class="opt"><input type="radio" name="q11" value="3"> 4) язычество</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="12" data-orig="№851" data-correct="2" data-correct-text="3) солнца и огня">
+<h3>12. Во время празднования Купалы древние славяне почитали культ:</h3>
+<div class="meta"><span>Задание № 851</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q12" value="0"> 1) камней</label>
+<label class="opt"><input type="radio" name="q12" value="1"> 2) предков</label>
+<label class="opt"><input type="radio" name="q12" value="2"> 3) солнца и огня</label>
+<label class="opt"><input type="radio" name="q12" value="3"> 4) домашних животных</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="13" data-orig="№951" data-correct="2" data-correct-text="3) борона-суковатка">
+<h3>13. Определите основное орудие труда, которое использовали при подсечно-огневом земледелии:</h3>
+<div class="meta"><span>Задание № 951</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q13" value="0"> 1) остроконечник</label>
+<label class="opt"><input type="radio" name="q13" value="1"> 2) копье</label>
+<label class="opt"><input type="radio" name="q13" value="2"> 3) борона-суковатка</label>
+<label class="opt"><input type="radio" name="q13" value="3"> 4) скребок</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="14" data-orig="№1001" data-correct="2" data-correct-text="3) орнаментом">
+<h3>14. Древние люди поверхность глиняной посуды украшали:</h3>
+<div class="meta"><span>Задание № 1001</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q14" value="0"> 1) миниатюрами</label>
+<label class="opt"><input type="radio" name="q14" value="1"> 2) фресками</label>
+<label class="opt"><input type="radio" name="q14" value="2"> 3) орнаментом</label>
+<label class="opt"><input type="radio" name="q14" value="3"> 4) витражами</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="open" data-n="15" data-orig="№1039" data-need="плем" data-correct-text="племя">
+<h3>15. Устойчивое объединение нескольких родов, связанных общностью происхождения, называется …</h3>
+<div class="meta"><span>Задание № 1039</span> · ЦТ 2013 · впишите слово</div>
+<input type="text" id="qi15" placeholder="Ваш ответ…" autocomplete="off">
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="16" data-orig="№1051" data-correct="2" data-correct-text="3) медь">
+<h3>16. Определите металл, который первым начали использовать древние люди на территории Беларуси:</h3>
+<div class="meta"><span>Задание № 1051</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q16" value="0"> 1) серебро</label>
+<label class="opt"><input type="radio" name="q16" value="1"> 2) золото</label>
+<label class="opt"><input type="radio" name="q16" value="2"> 3) медь</label>
+<label class="opt"><input type="radio" name="q16" value="3"> 4) алюминий</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="17" data-orig="№1052" data-correct="3" data-correct-text="4) кривичей">
+<h3>17. В VIII—IX вв. в верховьях Днепра и Западной Двины расселился крупный восточнославянский союз племен:</h3>
+<div class="meta"><span>Задание № 1052</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q17" value="0"> 1) радимичей</label>
+<label class="opt"><input type="radio" name="q17" value="1"> 2) волынян</label>
+<label class="opt"><input type="radio" name="q17" value="2"> 3) дреговичей</label>
+<label class="opt"><input type="radio" name="q17" value="3"> 4) кривичей</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="18" data-orig="№1101" data-correct="1" data-correct-text="2) железо (первым использовали медь — привозную, а добывали на месте первым железо из болотной руды)">
+<h3>18. Первый металл, который начали добывать на территории Беларуси древние люди, — это:</h3>
+<div class="meta"><span>Задание № 1101</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q18" value="0"> 1) золото</label>
+<label class="opt"><input type="radio" name="q18" value="1"> 2) железо</label>
+<label class="opt"><input type="radio" name="q18" value="2"> 3) алюминий</label>
+<label class="opt"><input type="radio" name="q18" value="3"> 4) олово</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="19" data-orig="№1102" data-correct="0" data-correct-text="1) славяне">
+<h3>19. В VI—VII вв. на юге Беларуси расселились:</h3>
+<div class="meta"><span>Задание № 1102</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q19" value="0"> 1) славяне</label>
+<label class="opt"><input type="radio" name="q19" value="1"> 2) германцы</label>
+<label class="opt"><input type="radio" name="q19" value="2"> 3) скифы</label>
+<label class="opt"><input type="radio" name="q19" value="3"> 4) кельты</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="20" data-orig="№201" data-correct="3" data-correct-text="4) дуб">
+<h3>20. Древние славяне на территории Беларуси поклонялись деревьям, особенно почитали:</h3>
+<div class="meta"><span>Задание № 201</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q20" value="0"> 1) ясень</label>
+<label class="opt"><input type="radio" name="q20" value="1"> 2) сосну</label>
+<label class="opt"><input type="radio" name="q20" value="2"> 3) вяз</label>
+<label class="opt"><input type="radio" name="q20" value="3"> 4) дуб</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="21" data-orig="№202" data-correct="2" data-correct-text="3) закуп">
+<h3>21. У восточных славян крестьянин, который брал у богатого человека заём и таким образом попадал в зависимость, получил название:</h3>
+<div class="meta"><span>Задание № 202</span></div>
+<label class="opt"><input type="radio" name="q21" value="0"> 1) смерд</label>
+<label class="opt"><input type="radio" name="q21" value="1"> 2) холоп</label>
+<label class="opt"><input type="radio" name="q21" value="2"> 3) закуп</label>
+<label class="opt"><input type="radio" name="q21" value="3"> 4) бобыль</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="22" data-orig="№303" data-correct="2" data-correct-text="3) князь">
+<h3>22. У восточных славян в Раннем средневековье отбор в дружину осуществлял(-о):</h3>
+<div class="meta"><span>Задание № 303</span> · ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q22" value="0"> 1) совет старейшин</label>
+<label class="opt"><input type="radio" name="q22" value="1"> 2) вече</label>
+<label class="opt"><input type="radio" name="q22" value="2"> 3) князь</label>
+<label class="opt"><input type="radio" name="q22" value="3"> 4) епископ</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="23" data-orig="№353" data-correct="3" data-correct-text="4) князь">
+<h3>23. В Средние века с помощью дружины свою власть среди населения укреплял(-о):</h3>
+<div class="meta"><span>Задание № 353</span> · ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q23" value="0"> 1) совет старейшин</label>
+<label class="opt"><input type="radio" name="q23" value="1"> 2) вече</label>
+<label class="opt"><input type="radio" name="q23" value="2"> 3) епископ</label>
+<label class="opt"><input type="radio" name="q23" value="3"> 4) князь</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="24" data-orig="№451" data-correct="3" data-correct-text="4) военная сила, состоящая из горожан и сельского населения">
+<h3>24. Военное ополчение у восточных славян в Раннем средневековье — это:</h3>
+<div class="meta"><span>Задание № 451</span> · ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q24" value="0"> 1) монашеская или духовно-рыцарская организация</label>
+<label class="opt"><input type="radio" name="q24" value="1"> 2) отряд вооруженных и специально обученных военному делу людей</label>
+<label class="opt"><input type="radio" name="q24" value="2"> 3) народное собрание, которое созывалось для решения важных дел</label>
+<label class="opt"><input type="radio" name="q24" value="3"> 4) военная сила, состоящая из горожан и сельского населения</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="25" data-orig="№453" data-correct="2" data-correct-text="3) княжеской дружины">
+<h3>25. Важным шагом на пути к образованию государственности у восточных славян было появление:</h3>
+<div class="meta"><span>Задание № 453</span> · ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q25" value="0"> 1) родовой общины</label>
+<label class="opt"><input type="radio" name="q25" value="1"> 2) язычества</label>
+<label class="opt"><input type="radio" name="q25" value="2"> 3) княжеской дружины</label>
+<label class="opt"><input type="radio" name="q25" value="3"> 4) присваивающего хозяйства</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="26" data-orig="№501" data-correct="1" data-correct-text="2) укрепленная часть города">
+<h3>26. На белорусских землях в IX–XII вв. детинцем назывался(-ась; -ось):</h3>
+<div class="meta"><span>Задание № 501</span></div>
+<label class="opt"><input type="radio" name="q26" value="0"> 1) отряд вооруженных и специально обученных военному делу людей</label>
+<label class="opt"><input type="radio" name="q26" value="1"> 2) укрепленная часть города</label>
+<label class="opt"><input type="radio" name="q26" value="2"> 3) совет старейшин</label>
+<label class="opt"><input type="radio" name="q26" value="3"> 4) небольшое поселение, жители которого занимались преимущественно сельским хозяйством</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="27" data-orig="№552" data-correct="0" data-correct-text="1) сельская (соседская) община">
+<h3>27. В X—XIII вв. у восточных славян вервью называлась(-ось):</h3>
+<div class="meta"><span>Задание № 552</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q27" value="0"> 1) сельская (соседская) община</label>
+<label class="opt"><input type="radio" name="q27" value="1"> 2) княжеское владение в период феодальной раздробленности</label>
+<label class="opt"><input type="radio" name="q27" value="2"> 3) семья, которая состояла из нескольких поколений родственников</label>
+<label class="opt"><input type="radio" name="q27" value="3"> 4) народное собрание, которое созывалось для решения важнейших вопросов</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="28" data-orig="№702" data-correct="3" data-correct-text="4) группы славянских племен">
+<h3>28. В I тыс. н.э. древнеримские и византийские историки склавинами, антами и венедами называли:</h3>
+<div class="meta"><span>Задание № 702</span> · ЦТ 2015</div>
+<label class="opt"><input type="radio" name="q28" value="0"> 1) крестьян, которые сохранили личную свободу, но лишились земли</label>
+<label class="opt"><input type="radio" name="q28" value="1"> 2) членов древней княжеской дружины</label>
+<label class="opt"><input type="radio" name="q28" value="2"> 3) потомков родоплеменной знати</label>
+<label class="opt"><input type="radio" name="q28" value="3"> 4) группы славянских племен</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="29" data-orig="№901" data-correct="1" data-correct-text="2) идол">
+<h3>29. Образное объемное изображение языческого бога — это:</h3>
+<div class="meta"><span>Задание № 901</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q29" value="0"> 1) икона</label>
+<label class="opt"><input type="radio" name="q29" value="1"> 2) идол</label>
+<label class="opt"><input type="radio" name="q29" value="2"> 3) портрет</label>
+<label class="opt"><input type="radio" name="q29" value="3"> 4) орнамент</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="30" data-orig="№902" data-correct="2" data-correct-text="3) смерды">
+<h3>30. В восточнославянских письменных источниках XI–XII вв. крестьяне, которые имели личную свободу, однако земля, на которой они работали, принадлежала князю, получили название:</h3>
+<div class="meta"><span>Задание № 902</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q30" value="0"> 1) людины</label>
+<label class="opt"><input type="radio" name="q30" value="1"> 2) тяглые</label>
+<label class="opt"><input type="radio" name="q30" value="2"> 3) смерды</label>
+<label class="opt"><input type="radio" name="q30" value="3"> 4) холопы</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="31" data-orig="№952" data-correct="0" data-correct-text="1) кривичей-полочан">
+<h3>31. Север современной Беларуси в IX–XI вв. заселяло племя:</h3>
+<div class="meta"><span>Задание № 952</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q31" value="0"> 1) кривичей-полочан</label>
+<label class="opt"><input type="radio" name="q31" value="1"> 2) дреговичей</label>
+<label class="opt"><input type="radio" name="q31" value="2"> 3) радимичей</label>
+<label class="opt"><input type="radio" name="q31" value="3"> 4) вятичей</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="32" data-orig="№752" data-correct="1" data-correct-text="2) зависимых крестьян">
+<h3>32. Свидетельством развития феодальных отношений у восточных славян в XI–XIII вв. являлось наличие:</h3>
+<div class="meta"><span>Задание № 752</span> · ЦТ 2014</div>
+<label class="opt"><input type="radio" name="q32" value="0"> 1) родовой общины</label>
+<label class="opt"><input type="radio" name="q32" value="1"> 2) зависимых крестьян</label>
+<label class="opt"><input type="radio" name="q32" value="2"> 3) большой патриархальной семьи</label>
+<label class="opt"><input type="radio" name="q32" value="3"> 4) пашенного земледелия</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="33" data-orig="№1002" data-correct="0" data-correct-text="1) славянизация">
+<h3>33. Постепенный процесс заимствования балтским населением языка, культуры и традиций славян получил название:</h3>
+<div class="meta"><span>Задание № 1002</span> · ЦТ 2013</div>
+<label class="opt"><input type="radio" name="q33" value="0"> 1) славянизация</label>
+<label class="opt"><input type="radio" name="q33" value="1"> 2) коренизация</label>
+<label class="opt"><input type="radio" name="q33" value="2"> 3) мобилизация</label>
+<label class="opt"><input type="radio" name="q33" value="3"> 4) национализация</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="open" data-n="34" data-orig="№1089" data-need="друж" data-correct-text="дружина">
+<h3>34. В Древней Руси отряд вооруженных и специально обученных военному делу людей, который возглавлял князь, назывался …</h3>
+<div class="meta"><span>Задание № 1089</span> · ЦТ 2013 · впишите слово</div>
+<input type="text" id="qi34" placeholder="Ваш ответ…" autocomplete="off">
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="open" data-n="35" data-orig="№989" data-need="посад" data-correct-text="посад">
+<h3>35. Запишите название поселения ремесленников и торговцев, которое располагалось возле укрепленного центра (детинца) средневекового восточнославянского города.</h3>
+<div class="meta"><span>Задание № 989</span> · ЦТ 2013 · впишите слово</div>
+<input type="text" id="qi35" placeholder="Ваш ответ…" autocomplete="off">
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="match" data-n="36" data-orig="№1239" data-ca="4" data-cb="2" data-cv="1" data-cg="3" data-correct-text="А4 Б2 В1 Г3 (А—посад, Б—городище, В—стоянка, Г—детинец)">
+<h3>36. Установите соответствие (впишите цифры):</h3>
+<div class="meta"><span>Задание № 1239</span> · понятия: 1) стоянка, 2) городище, 3) детинец, 4) посад</div>
+<div class="matchrow"><div class="left"><b>А)</b> поселение ремесленников и торговцев возле укрепленного центра города</div>
+<select id="q36A" data-mk="A"><option value="">— выберите —</option><option value="1">1) стоянка</option><option value="2">2) городище</option><option value="3">3) детинец</option><option value="4">4) посад</option></select></div>
+<div class="matchrow"><div class="left"><b>Б)</b> укрепленное поселение конца бронзового — начала раннего железного века</div>
+<select id="q36B" data-mk="B"><option value="">— выберите —</option><option value="1">1) стоянка</option><option value="2">2) городище</option><option value="3">3) детинец</option><option value="4">4) посад</option></select></div>
+<div class="matchrow"><div class="left"><b>В)</b> место поселения первобытного человека</div>
+<select id="q36V" data-mk="V"><option value="">— выберите —</option><option value="1">1) стоянка</option><option value="2">2) городище</option><option value="3">3) детинец</option><option value="4">4) посад</option></select></div>
+<div class="matchrow"><div class="left"><b>Г)</b> укрепленный центр средневекового восточнославянского города</div>
+<select id="q36G" data-mk="G"><option value="">— выберите —</option><option value="1">1) стоянка</option><option value="2">2) городище</option><option value="3">3) детинец</option><option value="4">4) посад</option></select></div>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="match" data-n="37" data-orig="№1289" data-ca="4" data-cb="2" data-cv="3" data-cg="1" data-correct-text="А4 Б2 В3 Г1 (А—вервь, Б—дань, В—барщина, Г—волок)">
+<h3>37. Установите соответствие (впишите цифры):</h3>
+<div class="meta"><span>Задание № 1289</span> · ЦТ 2012 · понятия: 1) волок, 2) дань, 3) барщина, 4) вервь</div>
+<div class="matchrow"><div class="left"><b>А)</b> название сельской общины у восточных славян</div>
+<select id="q37A" data-mk="A"><option value="">— выберите —</option><option value="1">1) волок</option><option value="2">2) дань</option><option value="3">3) барщина</option><option value="4">4) вервь</option></select></div>
+<div class="matchrow"><div class="left"><b>Б)</b> натуральный налог, который платили князю подвластные ему люди</div>
+<select id="q37B" data-mk="B"><option value="">— выберите —</option><option value="1">1) волок</option><option value="2">2) дань</option><option value="3">3) барщина</option><option value="4">4) вервь</option></select></div>
+<div class="matchrow"><div class="left"><b>В)</b> труд закрепощенных крестьян на земле феодала</div>
+<select id="q37V" data-mk="V"><option value="">— выберите —</option><option value="1">1) волок</option><option value="2">2) дань</option><option value="3">3) барщина</option><option value="4">4) вервь</option></select></div>
+<div class="matchrow"><div class="left"><b>Г)</b> сухопутный торговый путь, который соединял две реки</div>
+<select id="q37G" data-mk="G"><option value="">— выберите —</option><option value="1">1) волок</option><option value="2">2) дань</option><option value="3">3) барщина</option><option value="4">4) вервь</option></select></div>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="38" data-orig="№2017" data-correct="2" data-correct-text="3) кривичи проживали на белорусских землях в верховьях Днепра и Западной Двины">
+<h3>38. Определите правильное утверждение:</h3>
+<div class="meta"><span>Задание № 2017</span> · ЦТ 2020</div>
+<label class="opt"><input type="radio" name="q38" value="0"> 1) главным городом кривичей был Гомель</label>
+<label class="opt"><input type="radio" name="q38" value="1"> 2) в Раннем средневековье у балтов на территории Беларуси появились города</label>
+<label class="opt"><input type="radio" name="q38" value="2"> 3) кривичи проживали на белорусских землях в верховьях Днепра и Западной Двины</label>
+<label class="opt"><input type="radio" name="q38" value="3"> 4) до заселения белорусских земель у славян отсутствовало земледелие</label>
+<label class="opt"><input type="radio" name="q38" value="4"> 5) в Раннем средневековье все балты на белорусских землях приняли христианство</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="39" data-orig="№3" data-correct="0" data-correct-text="1) торговля осуществлялась преимущественно без посредничества денег">
+<h3>39. Определите особенность развития торговли на белорусских землях в VI—IX вв.:</h3>
+<div class="meta"><span>Задание № 3</span> · демо ЦТ 2016</div>
+<label class="opt"><input type="radio" name="q39" value="0"> 1) торговля осуществлялась преимущественно без посредничества денег</label>
+<label class="opt"><input type="radio" name="q39" value="1"> 2) с белорусских земель вывозили в основном товары ремесленного производства</label>
+<label class="opt"><input type="radio" name="q39" value="2"> 3) через белорусские земли проходило большое количество важнейших торговых путей</label>
+<label class="opt"><input type="radio" name="q39" value="3"> 4) отсутствовали торговые отношения с соседними государствами</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="40" data-orig="№103" data-correct="3" data-correct-text="4) земледелие">
+<h3>40. Основу хозяйства восточных славян в Раннем средневековье составляла(-о):</h3>
+<div class="meta"><span>Задание № 103</span> · ЦТ 2012</div>
+<label class="opt"><input type="radio" name="q40" value="0"> 1) охота</label>
+<label class="opt"><input type="radio" name="q40" value="1"> 2) торговля</label>
+<label class="opt"><input type="radio" name="q40" value="2"> 3) бортничество</label>
+<label class="opt"><input type="radio" name="q40" value="3"> 4) земледелие</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="41" data-orig="№1203" data-correct="1" data-correct-text="2) дань">
+<h3>41. Натуральный налог, который платили князю восточные славяне, назывался:</h3>
+<div class="meta"><span>Задание № 1203</span> · ЦТ 2012</div>
+<label class="opt"><input type="radio" name="q41" value="0"> 1) сгон</label>
+<label class="opt"><input type="radio" name="q41" value="1"> 2) дань</label>
+<label class="opt"><input type="radio" name="q41" value="2"> 3) чинш</label>
+<label class="opt"><input type="radio" name="q41" value="3"> 4) вервь</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="42" data-orig="№1603" data-correct="1" data-correct-text="2) детинец">
+<h3>42. Внутренняя укрепленная часть городов Беларуси в IX—XIII вв. называлась:</h3>
+<div class="meta"><span>Задание № 1603</span> · ЦТ 2017</div>
+<label class="opt"><input type="radio" name="q42" value="0"> 1) юридика</label>
+<label class="opt"><input type="radio" name="q42" value="1"> 2) детинец</label>
+<label class="opt"><input type="radio" name="q42" value="2"> 3) посад</label>
+<label class="opt"><input type="radio" name="q42" value="3"> 4) торг</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="43" data-orig="№1653" data-correct="1" data-correct-text="2) укрепленный центр города">
+<h3>43. Детинцем в IX—XIII вв. в городах Беларуси называли:</h3>
+<div class="meta"><span>Задание № 1653</span> · ЦТ 2017</div>
+<label class="opt"><input type="radio" name="q43" value="0"> 1) военный отряд</label>
+<label class="opt"><input type="radio" name="q43" value="1"> 2) укрепленный центр города</label>
+<label class="opt"><input type="radio" name="q43" value="2"> 3) собрание жителей города</label>
+<label class="opt"><input type="radio" name="q43" value="3"> 4) налог с ремесленников</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="44" data-orig="№1703" data-correct="2" data-correct-text="3) холопы">
+<h3>44. У восточных славян крестьяне, которые полностью утратили свою личную свободу, — это:</h3>
+<div class="meta"><span>Задание № 1703</span> · ЦТ 2017</div>
+<label class="opt"><input type="radio" name="q44" value="0"> 1) закупы</label>
+<label class="opt"><input type="radio" name="q44" value="1"> 2) смерды</label>
+<label class="opt"><input type="radio" name="q44" value="2"> 3) холопы</label>
+<label class="opt"><input type="radio" name="q44" value="3"> 4) людины</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="45" data-orig="№1753" data-correct="3" data-correct-text="4) тризна">
+<h3>45. У восточных славян обряд прощания с умершим в виде военной игры или соревнования называется:</h3>
+<div class="meta"><span>Задание № 1753</span> · ЦТ 2018</div>
+<label class="opt"><input type="radio" name="q45" value="0"> 1) причитание</label>
+<label class="opt"><input type="radio" name="q45" value="1"> 2) кремация</label>
+<label class="opt"><input type="radio" name="q45" value="2"> 3) турнир</label>
+<label class="opt"><input type="radio" name="q45" value="3"> 4) тризна</label>
+<div class="verdict"></div>
+</div>
+
+<!-- ================= РЕЗУЛЬТАТЫ ================= -->
+<div class="results" id="results1">
+<h2>📊 Результаты</h2>
+<div class="score" id="scoreLine1"></div>
+<div id="scoreTableWrap1"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+<button class="btn-dl" onclick="downloadResults(1)">⬇️ Скачать лист: вопросы + мои ответы + верно/неверно</button>
+<button class="btn-dl2" onclick="downloadBlank(1)">⬇️ Скачать только вопросы (бланк)</button>
+<button class="btn-dl2" onclick="copyReport(1)">📋 Скопировать отчёт</button>
+</div>
+<p style="font-size:13px;color:#5a6a85">Скачанный файл «результаты» содержит: каждый вопрос, ваш ответ, пометку <b>✅ верно / ❌ неверно</b>, а если неверно — <b>правильный ответ рядом</b>.</p>
+<pre class="report" id="report1"></pre>
+</div>
+
+<details style="background:#fff;border:2px solid #1f9d55;border-radius:12px;padding:14px 16px;margin:18px 0">
+<summary style="font-size:16px;font-weight:800;cursor:pointer">🔑 Ключ правильных ответов — все 45 (нажмите, чтобы открыть)</summary>
+<ol style="font-size:14px;margin:10px 0 0;padding-left:20px"><li><b>1.</b> №1 — <b>2)</b> началось использование железа</li><li><b>2.</b> №51 — <b>3)</b> собирательства</li><li><b>3.</b> №102 — <b>1)</b> появился человек современного типа</li><li><b>4.</b> №151 — <b>1)</b> родовая община</li><li><b>5.</b> №152 — <b>3)</b> балтов</li><li><b>6.</b> №251 — <b>2)</b> важнейшие вопросы решало общее собрание родственников</li><li><b>7.</b> №601 — <b>3)</b> достижение совершенства в изготовлении каменных орудий труда</li><li><b>8.</b> №651 — <b>2)</b> сложными условиями жизни</li><li><b>9.</b> №652 — <b>2)</b> выборный руководитель рода или племени</li><li><b>10.</b> №701 — <b>1)</b> возникновению имущественного неравенства</li><li><b>11.</b> №751 — <b>4)</b> язычество</li><li><b>12.</b> №851 — <b>3)</b> солнца и огня</li><li><b>13.</b> №951 — <b>3)</b> борона-суковатка</li><li><b>14.</b> №1001 — <b>3)</b> орнаментом</li><li><b>15.</b> №1039 — <b>племя</b></li><li><b>16.</b> №1051 — <b>3)</b> медь</li><li><b>17.</b> №1052 — <b>4)</b> кривичей</li><li><b>18.</b> №1101 — <b>2)</b> железо <i>(первым использовали привозную медь, а добывали на месте — железо из болотной руды)</i></li><li><b>19.</b> №1102 — <b>1)</b> славяне</li><li><b>20.</b> №201 — <b>4)</b> дуб</li><li><b>21.</b> №202 — <b>3)</b> закуп</li><li><b>22.</b> №303 — <b>3)</b> князь</li><li><b>23.</b> №353 — <b>4)</b> князь</li><li><b>24.</b> №451 — <b>4)</b> военная сила из горожан и сельского населения</li><li><b>25.</b> №453 — <b>3)</b> княжеской дружины</li><li><b>26.</b> №501 — <b>2)</b> укрепленная часть города</li><li><b>27.</b> №552 — <b>1)</b> сельская (соседская) община</li><li><b>28.</b> №702 — <b>4)</b> группы славянских племен</li><li><b>29.</b> №901 — <b>2)</b> идол</li><li><b>30.</b> №902 — <b>3)</b> смерды</li><li><b>31.</b> №952 — <b>1)</b> кривичей-полочан</li><li><b>32.</b> №752 — <b>2)</b> зависимых крестьян</li><li><b>33.</b> №1002 — <b>1)</b> славянизация</li><li><b>34.</b> №1089 — <b>дружина</b></li><li><b>35.</b> №989 — <b>посад</b></li><li><b>36.</b> №1239 — <b>А4 Б2 В1 Г3</b> (А—посад, Б—городище, В—стоянка, Г—детинец)</li><li><b>37.</b> №1289 — <b>А4 Б2 В3 Г1</b> (А—вервь, Б—дань, В—барщина, Г—волок)</li><li><b>38.</b> №2017 — <b>3)</b> кривичи проживали в верховьях Днепра и Западной Двины</li><li><b>39.</b> №3 — <b>1)</b> торговля без посредничества денег</li><li><b>40.</b> №103 — <b>4)</b> земледелие</li><li><b>41.</b> №1203 — <b>2)</b> дань</li><li><b>42.</b> №1603 — <b>2)</b> детинец</li><li><b>43.</b> №1653 — <b>2)</b> укрепленный центр города</li><li><b>44.</b> №1703 — <b>3)</b> холопы</li><li><b>45.</b> №1753 — <b>4)</b> тризна</li></ol>
+</details>
+<div class="toolbar" style="position:static;margin-top:16px">
+<span class="progress">Вкладка 1. Готовы? Нажмите «Проверить»</span>
+<button class="btn-check" onclick="checkTest(1)">✅ Проверить</button>
+<button class="btn-dl" onclick="downloadResults(1)">⬇️ Скачать результаты</button>
+<button class="btn-reset" onclick="resetTest(1)">↺ Сбросить</button>
+</div>
+
+
+</section>
+
+<!-- ================= ВКЛАДКА 2 ================= -->
+<section id="pane2" hidden>
+
+<div class="hint">📚 <b>Вкладка 2 — новые вопросы (32):</b> сборник (Часть А и В) + Решу ЦТ. Проверка, скачивание и ключ — отдельно от первой вкладки. Вопросы 18–19: впишите буквы подряд кириллицей, например <b>ГАБВ</b>.</div>
+
+<div class="q" data-type="choice" data-n="1" data-orig="Сборник А1" data-correct="3" data-correct-text="4) кремень">
+<h3>1. На территории Беларуси 2 тыс. лет до н. э. в примитивных шахтах древние люди добывали:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n1" value="0"> 1) медь</label><label class="opt"><input type="radio" name="n1" value="1"> 2) торф</label><label class="opt"><input type="radio" name="n1" value="2"> 3) нефть</label><label class="opt"><input type="radio" name="n1" value="3"> 4) кремень</label><label class="opt"><input type="radio" name="n1" value="4"> 5) железо</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="2" data-orig="Сборник А2" data-correct="2" data-correct-text="3) кривичи проживали на белорусских землях в верховьях Днепра и Западной Двины">
+<h3>2. Определите правильное утверждение:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n2" value="0"> 1) главным городом кривичей был Гомель</label><label class="opt"><input type="radio" name="n2" value="1"> 2) в Раннем средневековье у балтов на территории Беларуси появились города</label><label class="opt"><input type="radio" name="n2" value="2"> 3) кривичи проживали на белорусских землях в верховьях Днепра и Западной Двины</label><label class="opt"><input type="radio" name="n2" value="3"> 4) до заселения белорусских земель у славян отсутствовало земледелие</label><label class="opt"><input type="radio" name="n2" value="4"> 5) в Раннем средневековье все балты на белорусских землях приняли христианство</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="3" data-orig="Сборник А3" data-correct="1" data-correct-text="2) появление богатых землевладельцев и зависимых от них крестьян">
+<h3>3. О развитии феодальных отношений на белорусских землях в IX—XIII вв. свидетельствует:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n3" value="0"> 1) юридическое закрепощение крестьян</label><label class="opt"><input type="radio" name="n3" value="1"> 2) появление богатых землевладельцев и зависимых от них крестьян</label><label class="opt"><input type="radio" name="n3" value="2"> 3) активное развитие торговли</label><label class="opt"><input type="radio" name="n3" value="3"> 4) возникновение патриархального (домашнего) рабства</label><label class="opt"><input type="radio" name="n3" value="4"> 5) увеличение количества городов</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="4" data-orig="Сборник А4" data-correct="1" data-correct-text="2) 960-е гг.">
+<h3>4. Варяжский князь Рогволод установил свою власть в Полоцке в:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n4" value="0"> 1) 862 г.</label><label class="opt"><input type="radio" name="n4" value="1"> 2) 960-е гг.</label><label class="opt"><input type="radio" name="n4" value="2"> 3) 992 г.</label><label class="opt"><input type="radio" name="n4" value="3"> 4) 1044 г.</label><label class="opt"><input type="radio" name="n4" value="4"> 5) 1101 г.</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="5" data-orig="Сборник А1" data-correct="0" data-correct-text="1) зарождение городов">
+<h3>5. На белорусских землях в VIII—IX вв. началось(-ся):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n5" value="0"> 1) зарождение городов</label><label class="opt"><input type="radio" name="n5" value="1"> 2) использование металлов</label><label class="opt"><input type="radio" name="n5" value="2"> 3) расселение индоевропейцев</label><label class="opt"><input type="radio" name="n5" value="3"> 4) переход к отцовскому роду</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="6" data-orig="Сборник А2" data-correct="2" data-correct-text="3) западноевропейский денарий">
+<h3>6. С конца X до конца XI в. основной денежной единицей на белорусских землях был(-а):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n6" value="0"> 1) рубль</label><label class="opt"><input type="radio" name="n6" value="1"> 2) гривна</label><label class="opt"><input type="radio" name="n6" value="2"> 3) западноевропейский денарий</label><label class="opt"><input type="radio" name="n6" value="3"> 4) золотой слиток</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="7" data-orig="Сборник А3" data-correct="1" data-correct-text="2) полоцкие князья были захвачены в плен и высланы в Византию">
+<h3>7. В результате походов киевского князя Мстислава в Полоцкую землю:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n7" value="0"> 1) укрепилась центральная власть полоцких князей</label><label class="opt"><input type="radio" name="n7" value="1"> 2) полоцкие князья были захвачены в плен и высланы в Византию</label><label class="opt"><input type="radio" name="n7" value="2"> 3) обострилась борьба между Полоцком и Киевом за Минск</label><label class="opt"><input type="radio" name="n7" value="3"> 4) Полоцкое княжество распалось на более мелкие самостоятельные княжества</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="8" data-orig="Сборник А1" data-correct="2" data-correct-text="3) появление излишков продуктов">
+<h3>8. Одной из причин выделения знати в племенах восточных славян было (был):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n8" value="0"> 1) распространение христианства</label><label class="opt"><input type="radio" name="n8" value="1"> 2) распад родовой общины</label><label class="opt"><input type="radio" name="n8" value="2"> 3) появление излишков продуктов</label><label class="opt"><input type="radio" name="n8" value="3"> 4) расселение индоевропейцев</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="9" data-orig="Сборник А2" data-correct="1" data-correct-text="2) земледелие">
+<h3>9. Главным занятием восточных славян в IX—XIII вв. являлось(-ась):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n9" value="0"> 1) бортничество</label><label class="opt"><input type="radio" name="n9" value="1"> 2) земледелие</label><label class="opt"><input type="radio" name="n9" value="2"> 3) собирательство</label><label class="opt"><input type="radio" name="n9" value="3"> 4) торговля</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="10" data-orig="Сборник А3" data-correct="0" data-correct-text="1) получение Полоцком контроля над волоками между Днепром и Западной Двиной">
+<h3>10. Итогом военного похода полоцкого князя Брячислава Изяславича в Новгород (1021) явилось(-ась; -ся):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n10" value="0"> 1) получение Полоцком контроля над волоками между Днепром и Западной Двиной</label><label class="opt"><input type="radio" name="n10" value="1"> 2) подчинение Новгорода Полоцку</label><label class="opt"><input type="radio" name="n10" value="2"> 3) потеря Полоцком части своих земель</label><label class="opt"><input type="radio" name="n10" value="3"> 4) раздел Полоцкого княжества между Новгородом и Киевом</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="match" data-n="11" data-orig="Сборник В1" data-ca="4" data-cb="2" data-cv="1" data-cg="3" data-correct-text="А4 Б2 В1 Г3 (А—100–35 тыс. лет назад, Б—VII в. до н.э., В—3-е тыс. до н.э., Г—начало 2-го тыс. до н.э.)">
+<h3>11. Установите соответствие. Выберите цифру для каждой буквы.</h3>
+<div class="meta"><span>Сборник · Часть В</span></div>
+<div class="matchrow"><div class="left"><b>A)</b> проникновение первых людей на территорию Беларуси</div>
+<select data-mk="A"><option value="">— выберите —</option><option value="1">1) 3-е тысячелетие до н. э.</option><option value="2">2) VII в. до н. э.</option><option value="3">3) начало 2-го тысячелетия до н. э.</option><option value="4">4) 100—35 тысяч лет назад</option></select></div>
+<div class="matchrow"><div class="left"><b>B)</b> начало железного века на территории Беларуси</div>
+<select data-mk="B"><option value="">— выберите —</option><option value="1">1) 3-е тысячелетие до н. э.</option><option value="2">2) VII в. до н. э.</option><option value="3">3) начало 2-го тысячелетия до н. э.</option><option value="4">4) 100—35 тысяч лет назад</option></select></div>
+<div class="matchrow"><div class="left"><b>V)</b> начало перехода к животноводству на белорусских землях</div>
+<select data-mk="V"><option value="">— выберите —</option><option value="1">1) 3-е тысячелетие до н. э.</option><option value="2">2) VII в. до н. э.</option><option value="3">3) начало 2-го тысячелетия до н. э.</option><option value="4">4) 100—35 тысяч лет назад</option></select></div>
+<div class="matchrow"><div class="left"><b>G)</b> начало бронзового века на территории Беларуси</div>
+<select data-mk="G"><option value="">— выберите —</option><option value="1">1) 3-е тысячелетие до н. э.</option><option value="2">2) VII в. до н. э.</option><option value="3">3) начало 2-го тысячелетия до н. э.</option><option value="4">4) 100—35 тысяч лет назад</option></select></div>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="12" data-orig="Сборник А1" data-correct="1" data-correct-text="2) появление излишков продуктов">
+<h3>12. Выделению в соседской общине людей, которые НЕ участвовали в производстве, содействовало:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n12" value="0"> 1) принятие христианства</label><label class="opt"><input type="radio" name="n12" value="1"> 2) появление излишков продуктов</label><label class="opt"><input type="radio" name="n12" value="2"> 3) появление княжеской дружины</label><label class="opt"><input type="radio" name="n12" value="3"> 4) массовое использование рабской силы</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="13" data-orig="Сборник А2" data-correct="3" data-correct-text="4) церкви и соборы">
+<h3>13. Немногочисленными зданиями из камня и кирпича в городах на белорусских землях в X—XIII вв. являлись:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n13" value="0"> 1) ратуши</label><label class="opt"><input type="radio" name="n13" value="1"> 2) хозяйственные постройки</label><label class="opt"><input type="radio" name="n13" value="2"> 3) городские укрепления</label><label class="opt"><input type="radio" name="n13" value="3"> 4) церкви и соборы</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="14" data-orig="Сборник А3" data-correct="0" data-correct-text="1) зависимость от Киева">
+<h3>14. Особенностью политической жизни Туровского княжества в XI — первой половине XII в. являлась(-ось):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n14" value="0"> 1) зависимость от Киева</label><label class="opt"><input type="radio" name="n14" value="1"> 2) возвышение веча над княжеской властью</label><label class="opt"><input type="radio" name="n14" value="2"> 3) отсутствие отдельной церковной епархии</label><label class="opt"><input type="radio" name="n14" value="3"> 4) объединение с Полоцким княжеством для противостояния Киеву</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="15" data-orig="Сборник А1" data-correct="2" data-correct-text="3) сформировались местные славянские объединения племен">
+<h3>15. В VIII—IX вв. на белорусских землях:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n15" value="0"> 1) проживали только племена балтов</label><label class="opt"><input type="radio" name="n15" value="1"> 2) сформировалось балто-славянское государство</label><label class="opt"><input type="radio" name="n15" value="2"> 3) сформировались местные славянские объединения племен</label><label class="opt"><input type="radio" name="n15" value="3"> 4) произошел переход к родовой общине</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="16" data-orig="Сборник А2" data-correct="0" data-correct-text="1) князья и дружинники">
+<h3>16. Наибольшее влияние в обществе на белорусских землях в X—XIII вв. имели(-о):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n16" value="0"> 1) князья и дружинники</label><label class="opt"><input type="radio" name="n16" value="1"> 2) крестьяне-общинники</label><label class="opt"><input type="radio" name="n16" value="2"> 3) купцы</label><label class="opt"><input type="radio" name="n16" value="3"> 4) духовенство</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="17" data-orig="Сборник А3" data-correct="3" data-correct-text="4) стремление взять под контроль волоки, соединявшие Днепр и Западную Двину">
+<h3>17. Причиной похода полоцкого князя Брячислава Изяславича на Новгород (1021) являлось(-ась):</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n17" value="0"> 1) стремление получить выход к Балтийскому морю</label><label class="opt"><input type="radio" name="n17" value="1"> 2) борьба за контроль над балтскими племенами</label><label class="opt"><input type="radio" name="n17" value="2"> 3) распространение христианства на новгородских землях</label><label class="opt"><input type="radio" name="n17" value="3"> 4) стремление взять под контроль волоки, соединявшие Днепр и Западную Двину</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="order" data-n="18" data-orig="Сборник В1" data-exact="ГАБВ" data-correct-text="ГАБВ (Г—Туров, 980 → А—Витебск и Усвяты, 1021 → Б—Всеслав, 1044 → В—монголо-татары, ~1240)">
+<h3>18. Установите последовательность событий. Ответ запишите в виде сочетания букв. Например: ГАБВ.</h3>
+<div class="meta"><span>Сборник · Часть В</span> · впишите буквы кириллицей подряд</div>
+<div class="ord"><b>А)</b> Присоединение к Полоцкому княжеству городов Витебск и Усвяты</div><div class="ord"><b>Б)</b> начало княжения Всеслава Брячиславича в Полоцке</div><div class="ord"><b>В)</b> вторжение на Берестейщину войска монголо-татар</div><div class="ord"><b>Г)</b> первое упоминание о Турове в летописи</div>
+<input type="text" id="ni18" placeholder="Например: Г…" autocomplete="off">
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="order" data-n="19" data-orig="Сборник В1" data-exact="ГВБА" data-correct-text="ГВБА (Г—Туров, 980 → В—Глеб в Менске, 1101 → Б—поход Мстислава, 1127 → А—монголо-татары, ~1240)">
+<h3>19. Установите последовательность событий. Ответ запишите в виде сочетания букв. Например: ГВБА.</h3>
+<div class="meta"><span>Сборник · Часть В</span> · впишите буквы кириллицей подряд</div>
+<div class="ord"><b>А)</b> Вторжение на Берестейщину войска монголо-татар</div><div class="ord"><b>Б)</b> поход киевского князя Мстислава и семи русских князей на Полоцкую землю</div><div class="ord"><b>В)</b> начало княжения Глеба Всеславича в Менске (Минске)</div><div class="ord"><b>Г)</b> первое упоминание в летописи о Турове</div>
+<input type="text" id="ni19" placeholder="Например: Г…" autocomplete="off">
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="20" data-orig="Сборник А1" data-correct="1" data-correct-text="2) стоянка">
+<h3>20. Место (тип) поселения человека каменного века — это:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n20" value="0"> 1) город</label><label class="opt"><input type="radio" name="n20" value="1"> 2) стоянка</label><label class="opt"><input type="radio" name="n20" value="2"> 3) детинец</label><label class="opt"><input type="radio" name="n20" value="3"> 4) застенок</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="21" data-orig="Сборник А2" data-correct="0" data-correct-text="1) у балтов на территории Беларуси к приходу славян не было городов">
+<h3>21. Определите правильное утверждение:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n21" value="0"> 1) у балтов на территории Беларуси к приходу славян не было городов</label><label class="opt"><input type="radio" name="n21" value="1"> 2) племена литвы и ятвягов, проживавших на территории Беларуси, являлись восточными славянами</label><label class="opt"><input type="radio" name="n21" value="2"> 3) в V в. балты не занимались торговлей и ремеслами</label><label class="opt"><input type="radio" name="n21" value="3"> 4) балты гораздо раньше, чем славяне, приняли христианство</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="22" data-orig="Сборник А3" data-correct="3" data-correct-text="4) смерды">
+<h3>22. Зависимые полусвободные (частично свободные) крестьяне в письменных источниках XI—XIII вв. называются:</h3>
+<div class="meta"><span>Сборник · Часть А</span></div>
+<label class="opt"><input type="radio" name="n22" value="0"> 1) людины</label><label class="opt"><input type="radio" name="n22" value="1"> 2) челядь</label><label class="opt"><input type="radio" name="n22" value="2"> 3) холопы</label><label class="opt"><input type="radio" name="n22" value="3"> 4) смерды</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="23" data-orig="№2571" data-correct="4" data-correct-text="5) мифах">
+<h3>23. В первобытном обществе на белорусских землях понимание человеком окружающего мира было отражено в:</h3>
+<div class="meta"><span>Задание № 2571 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n23" value="0"> 1) житиях</label><label class="opt"><input type="radio" name="n23" value="1"> 2) евангелиях</label><label class="opt"><input type="radio" name="n23" value="2"> 3) хрониках</label><label class="opt"><input type="radio" name="n23" value="3"> 4) летописях</label><label class="opt"><input type="radio" name="n23" value="4"> 5) мифах</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="24" data-orig="№2572" data-correct="0" data-correct-text="1) натуральный налог (меха, мед и т.д.), который платили князю подвластные ему люди">
+<h3>24. Дань — это:</h3>
+<div class="meta"><span>Задание № 2572 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n24" value="0"> 1) натуральный налог (меха, мед и т.д.), который платили князю подвластные ему люди</label><label class="opt"><input type="radio" name="n24" value="1"> 2) десятая часть доходов верховной власти (князя), которая отдавалась церкви</label><label class="opt"><input type="radio" name="n24" value="2"> 3) орган власти, состоявший из старейшин и решавший вопросы жизни рода или племени</label><label class="opt"><input type="radio" name="n24" value="3"> 4) название военного ополчения в Древней Руси</label><label class="opt"><input type="radio" name="n24" value="4"> 5) специальные ритуальные действия, которыми сопровождались важные события в жизни людей</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="25" data-orig="№2573" data-correct="3" data-correct-text="4) Полоцке">
+<h3>25. Первая епархия на белорусских землях была основана в:</h3>
+<div class="meta"><span>Задание № 2573 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n25" value="0"> 1) Могилеве</label><label class="opt"><input type="radio" name="n25" value="1"> 2) Витебске</label><label class="opt"><input type="radio" name="n25" value="2"> 3) Менске (Минске)</label><label class="opt"><input type="radio" name="n25" value="3"> 4) Полоцке</label><label class="opt"><input type="radio" name="n25" value="4"> 5) Гродно</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="26" data-orig="№2609" data-correct="2" data-correct-text="3) родовая община">
+<h3>26. Определите сообщество людей каменного века:</h3>
+<div class="meta"><span>Задание № 2609 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n26" value="0"> 1) нация</label><label class="opt"><input type="radio" name="n26" value="1"> 2) сословие</label><label class="opt"><input type="radio" name="n26" value="2"> 3) родовая община</label><label class="opt"><input type="radio" name="n26" value="3"> 4) народность</label><label class="opt"><input type="radio" name="n26" value="4"> 5) вече</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="27" data-orig="№2610" data-correct="1" data-correct-text="2) объединение союзов племен или отдельный союз племен, в котором существовала княжеская власть">
+<h3>27. Племенное княжение — это:</h3>
+<div class="meta"><span>Задание № 2610 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n27" value="0"> 1) прочное объединение нескольких родов, связанных общностью происхождения</label><label class="opt"><input type="radio" name="n27" value="1"> 2) объединение союзов племен или отдельный союз племен, в котором существовала княжеская власть</label><label class="opt"><input type="radio" name="n27" value="2"> 3) название крупного княжества Древней Руси, которое делилось на волости</label><label class="opt"><input type="radio" name="n27" value="3"> 4) наиболее ранний период в развитии человеческого общества</label><label class="opt"><input type="radio" name="n27" value="4"> 5) коллектив (небольшая группа) людей, которые вели общее хозяйство и совместно владели землей и скотом</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="28" data-orig="№2611" data-correct="0" data-correct-text="1) епископ">
+<h3>28. На белорусских землях в X—XIII вв. во главе епархии стоял(-о):</h3>
+<div class="meta"><span>Задание № 2611 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n28" value="0"> 1) епископ</label><label class="opt"><input type="radio" name="n28" value="1"> 2) князь</label><label class="opt"><input type="radio" name="n28" value="2"> 3) староста</label><label class="opt"><input type="radio" name="n28" value="3"> 4) вече</label><label class="opt"><input type="radio" name="n28" value="4"> 5) совет старейшин</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="29" data-orig="№2264" data-correct="2" data-correct-text="3) индоевропейцев">
+<h3>29. В 3-м тыс. до н.э. на белорусские земли проникли племена животноводов-кочевников:</h3>
+<div class="meta"><span>Задание № 2264 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n29" value="0"> 1) половцев</label><label class="opt"><input type="radio" name="n29" value="1"> 2) кельтов</label><label class="opt"><input type="radio" name="n29" value="2"> 3) индоевропейцев</label><label class="opt"><input type="radio" name="n29" value="3"> 4) германцев</label><label class="opt"><input type="radio" name="n29" value="4"> 5) монголов</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="30" data-orig="№2265" data-correct="4" data-correct-text="5) существование свободного и зависимого населения">
+<h3>30. Определите одну из характерных черт развития феодальных отношений на белорусских землях в IX — середине XIII в.:</h3>
+<div class="meta"><span>Задание № 2265 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n30" value="0"> 1) сокращение боярского землевладения</label><label class="opt"><input type="radio" name="n30" value="1"> 2) отсутствие имущественного неравенства</label><label class="opt"><input type="radio" name="n30" value="2"> 3) закрепление за крестьянами земли в собственность</label><label class="opt"><input type="radio" name="n30" value="3"> 4) распад соседской общины</label><label class="opt"><input type="radio" name="n30" value="4"> 5) существование свободного и зависимого населения</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="31" data-orig="№2266" data-correct="1" data-correct-text="2) укрепление отдельных городов как феодальных центров">
+<h3>31. Политической раздробленности на белорусских землях в XII — первой половине XIII в. способствовала(-о):</h3>
+<div class="meta"><span>Задание № 2266 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n31" value="0"> 1) деятельность вече в городах</label><label class="opt"><input type="radio" name="n31" value="1"> 2) укрепление отдельных городов как феодальных центров</label><label class="opt"><input type="radio" name="n31" value="2"> 3) распространение христианства</label><label class="opt"><input type="radio" name="n31" value="3"> 4) усиление внешней опасности</label><label class="opt"><input type="radio" name="n31" value="4"> 5) существование коллективной собственности на землю</label>
+<div class="verdict"></div>
+</div>
+
+<div class="q" data-type="choice" data-n="32" data-orig="№2267" data-correct="4" data-correct-text="5) строительство церквей и монастырей">
+<h3>32. Для периода распространения христианства на белорусских землях в конце X — XIII в. был(-о; -и) характерен (-но; -ны):</h3>
+<div class="meta"><span>Задание № 2267 · Решу ЦТ</span></div>
+<label class="opt"><input type="radio" name="n32" value="0"> 1) упадок культуры</label><label class="opt"><input type="radio" name="n32" value="1"> 2) создание независимой от Киева митрополии</label><label class="opt"><input type="radio" name="n32" value="2"> 3) отсутствие поддержки христианства со стороны князя</label><label class="opt"><input type="radio" name="n32" value="3"> 4) массовые выступления противников христианства</label><label class="opt"><input type="radio" name="n32" value="4"> 5) строительство церквей и монастырей</label>
+<div class="verdict"></div>
+</div>
+
+<div class="results" id="results2">
+<h2>📊 Результаты — вкладка 2</h2>
+<div class="score" id="scoreLine2"></div>
+<div id="scoreTableWrap2"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+<button class="btn-dl" onclick="downloadResults(2)">⬇️ Скачать лист: вопросы + мои ответы + верно/неверно</button>
+<button class="btn-dl2" onclick="downloadBlank(2)">⬇️ Скачать только вопросы (бланк)</button>
+<button class="btn-dl2" onclick="copyReport(2)">📋 Скопировать отчёт</button>
+</div>
+<p style="font-size:13px;color:#5a6a85">Скачанный файл содержит: каждый вопрос, ваш ответ, пометку <b>✅ верно / ❌ неверно</b>, а если неверно — <b>правильный ответ рядом</b>.</p>
+<pre class="report" id="report2"></pre>
+</div>
+
+<details style="background:#fff;border:2px solid #1f9d55;border-radius:12px;padding:14px 16px;margin:18px 0">
+<summary style="font-size:16px;font-weight:800;cursor:pointer">🔑 Ключ правильных ответов — вкладка 2, все 32 (нажмите, чтобы открыть)</summary>
+<ol style="font-size:14px;margin:10px 0 0;padding-left:20px"><li><b>1.</b> 4) кремень</li><li><b>2.</b> 3) кривичи — верховья Днепра и Западной Двины</li><li><b>3.</b> 2) богатые землевладельцы и зависимые крестьяне</li><li><b>4.</b> 2) 960-е гг.</li><li><b>5.</b> 1) зарождение городов</li><li><b>6.</b> 3) западноевропейский денарий</li><li><b>7.</b> 2) князья захвачены и высланы в Византию</li><li><b>8.</b> 3) появление излишков продуктов</li><li><b>9.</b> 2) земледелие</li><li><b>10.</b> 1) контроль над волоками</li><li><b>11.</b> А4 Б2 В1 Г3</li><li><b>12.</b> 2) появление излишков продуктов</li><li><b>13.</b> 4) церкви и соборы</li><li><b>14.</b> 1) зависимость от Киева</li><li><b>15.</b> 3) славянские объединения племен</li><li><b>16.</b> 1) князья и дружинники</li><li><b>17.</b> 4) взять под контроль волоки</li><li><b>18.</b> ГАБВ</li><li><b>19.</b> ГВБА</li><li><b>20.</b> 2) стоянка</li><li><b>21.</b> 1) у балтов не было городов</li><li><b>22.</b> 4) смерды</li><li><b>23.</b> №2571 — 5) мифах</li><li><b>24.</b> №2572 — 1) натуральный налог</li><li><b>25.</b> №2573 — 4) Полоцке</li><li><b>26.</b> №2609 — 3) родовая община</li><li><b>27.</b> №2610 — 2) союз(ы) племен с княжеской властью</li><li><b>28.</b> №2611 — 1) епископ</li><li><b>29.</b> №2264 — 3) индоевропейцев</li><li><b>30.</b> №2265 — 5) свободное и зависимое население</li><li><b>31.</b> №2266 — 2) укрепление городов как феодальных центров</li><li><b>32.</b> №2267 — 5) строительство церквей и монастырей</li></ol>
+</details>
+
+<div class="toolbar" style="position:static;margin-top:16px">
+<span class="progress">Вкладка 2. Готовы? Нажмите «Проверить»</span>
+<button class="btn-check" onclick="checkTest(2)">✅ Проверить</button>
+<button class="btn-dl" onclick="downloadResults(2)">⬇️ Скачать результаты</button>
+<button class="btn-reset" onclick="resetTest(2)">↺ Сбросить</button>
+</div>
+
+</section>
+
+<footer>История Беларуси · Вкладка 1: ЦТ 2011–2020 (45) · Вкладка 2: сборник + Решу ЦТ (32) · Ответы сверены с учебниками</footer>
+</div>
+
+<script src="test_istoriya_belarusi.js"></script>
+</body>
+</html>
