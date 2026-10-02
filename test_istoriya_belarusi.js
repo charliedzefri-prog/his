@@ -1,19 +1,20 @@
 let activeTab = 1;
-let checked = {1:false, 2:false};
-let lastData = {1:[], 2:[]};
-const tabTitles = {1:"Вкладка 1 · Тест 45 вопросов", 2:"Вкладка 2 · Новые 32 вопроса"};
-const tabFiles = {1:"vkladka1-45", 2:"vkladka2-32"};
+let checked = {1:false, 2:false, 3:false};
+let lastData = {1:[], 2:[], 3:[]};
+const tabTitles = {1:"Вкладка 1 · Тест 45 вопросов", 2:"Вкладка 2 · Новые 32 вопроса", 3:"Вкладка 3 · Даты (случайный вариант)"};
+const tabFiles = {1:"vkladka1-45", 2:"vkladka2-32", 3:"vkladka3-daty"};
 
 function pane(t){ return document.getElementById("pane"+t); }
 
-function switchTab(t){
+function switchTab(t, scroll){
   activeTab = t;
-  [1,2].forEach(function(k){
+  [1,2,3].forEach(function(k){
     document.getElementById("pane"+k).hidden = (k!==t);
     document.getElementById("tabbtn"+k).classList.toggle("on", k===t);
   });
+  try{ history.replaceState(null, "", "#tab"+t); }catch(e){}
   updateProgress();
-  document.querySelector(".tabbar").scrollIntoView({behavior:"smooth"});
+  if(scroll!==false) document.querySelector(".tabbar").scrollIntoView({behavior:"smooth"});
 }
 
 function norm(s){return (s||"").toLowerCase().replace(/ё/g,"е").replace(/[^а-яa-z0-9]/g,"");}
@@ -237,4 +238,8 @@ function copyReport(t){
     ta.remove();
   }
 }
-updateProgress();
+(function(){
+  const m = (location.hash||"").match(/^#tab([123])$/);
+  switchTab(m ? parseInt(m[1],10) : 1, false);
+})();
+
