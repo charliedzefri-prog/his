@@ -142,7 +142,7 @@ function collectCurrent(t){
   return arr;
 }
 
-function buildResultsHTML(t){
+function buildResultsHTML(t, fontCss){
   const data=collectCurrent(t);
   let score=null,total=data.length;
   if(checked[t]){ score=data.filter(function(r){return r.ok;}).length; }
@@ -154,7 +154,7 @@ function buildResultsHTML(t){
     rows+="<tr style='background:"+bg+"'><td>"+r.n+(r.orig?" ("+escapeHtml(r.orig)+")":"")+"</td><td>"+escapeHtml(r.qtext)+"</td><td>"+escapeHtml(r.user)+"</td><td><b>"+verdict+"</b></td><td>"+corr+"</td></tr>";
   });
   return "<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Результаты — "+tabTitles[t]+"</title>"
-  +"<style>body{font-family:Arial,sans-serif;margin:20px;color:#222}h1{font-size:20px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid #999;padding:7px;vertical-align:top}th{background:#eef2f9}</style></head><body>"
+  +"<style>"+(fontCss||"")+"body{font-family:'HBSite',Arial,sans-serif;margin:20px;color:#222}h1{font-size:20px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid #999;padding:7px;vertical-align:top}th{background:#eef2f9}</style></head><body>"
   +"<h1>📜 История Беларуси — "+tabTitles[t]+" (лист ответов)</h1>"
   +"<p><b>Дата:</b> "+new Date().toLocaleString("ru-RU")+"<br>"
   +(score!==null?"<b>Результат: "+score+" из "+total+" ("+Math.round(score/total*100)+"%)</b><br>":"<i>Тест ещё не проверен — показаны только выбранные ответы.</i><br>")
@@ -162,7 +162,7 @@ function buildResultsHTML(t){
   +"<table><tr><th>№</th><th>Вопрос</th><th>Мой ответ</th><th>Верно / неверно</th><th>Правильный ответ (если ошибся)</th></tr>"+rows+"</table></body></html>";
 }
 
-function buildBlankHTML(t){
+function buildBlankHTML(t, fontCss){
   let items="";
   pane(t).querySelectorAll(".q").forEach(function(q){
     const n=q.dataset.n, orig=(q.dataset.orig||"");
@@ -180,8 +180,29 @@ function buildBlankHTML(t){
     }
     items+="<div style='border:1px solid #999;border-radius:8px;padding:10px;margin:10px 0'><b>Вопрос "+n+(orig?" ("+escapeHtml(orig)+")":"")+"</b><br>"+escapeHtml(getQText(q))+"<div style='margin-top:6px'>"+body+"</div></div>";
   });
-  return "<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Бланк — "+tabTitles[t]+"</title></head><body style='font-family:Arial,sans-serif;margin:20px'>"
+  return "<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Бланк — "+tabTitles[t]+"</title><style>"+(fontCss||"")+"body{font-family:'HBSite',Arial,sans-serif;}</style></head><body style='margin:20px'>"
   +"<h1>Бланк вопросов — "+tabTitles[t]+"</h1>"+items+"</body></html>";
+}
+
+let fontCssCache = null;
+async function getFontCss(){
+  if(fontCssCache !== null) return fontCssCache;
+  try{
+    const files = ["roboto-cyrillic-400-normal.woff2","roboto-latin-400-normal.woff2","roboto-cyrillic-700-normal.woff2","roboto-latin-700-normal.woff2"];
+    const weights = [400,400,700,700];
+    let css = "";
+    for(let i=0;i<files.length;i++){
+      const resp = await fetch("fonts/"+files[i]);
+      if(!resp.ok) throw new Error("font");
+      const buf = await resp.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      let bin = "";
+      for(let k=0;k<bytes.length;k++) bin += String.fromCharCode(bytes[k]);
+      css += '@font-face{font-family:"HBSite";font-style:normal;font-weight:'+weights[i]+';src:url(data:font/woff2;base64,'+btoa(bin)+') format("woff2");}';
+    }
+    fontCssCache = css;
+  }catch(e){ fontCssCache = ""; }
+  return fontCssCache;
 }
 
 function saveFile(name,content,mime){
@@ -192,15 +213,17 @@ function saveFile(name,content,mime){
   setTimeout(function(){URL.revokeObjectURL(url);a.remove();},800);
 }
 
-function downloadResults(t){
+async function downloadResults(t){
   if(!checked[t]){
     if(!confirm("Вкладка "+t+" ещё не проверена. Скачать лист с текущими ответами без пометок верно/неверно? (Для пометок сначала нажмите «Проверить».)")) return;
   }
-  saveFile("rezultaty-"+tabFiles[t]+".html",buildResultsHTML(t),"text/html;charset=utf-8");
+  const cssR = await getFontCss();
+  saveFile("rezultaty-"+tabFiles[t]+".html",buildResultsHTML(t, cssR),"text/html;charset=utf-8");
 }
 
-function downloadBlank(t){
-  saveFile("blank-"+tabFiles[t]+".html",buildBlankHTML(t),"text/html;charset=utf-8");
+async function downloadBlank(t){
+  const cssB = await getFontCss();
+  saveFile("blank-"+tabFiles[t]+".html",buildBlankHTML(t, cssB),"text/html;charset=utf-8");
 }
 
 function copyReport(t){

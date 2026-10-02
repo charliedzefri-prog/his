@@ -2,11 +2,18 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" href="fonts/roboto-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/roboto-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Тест по истории Беларуси — Первобытность и восточные славяне (45 вопросов)</title>
 <style>
+@font-face{font-family:"HBSite";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/roboto-cyrillic-400-normal.woff2") format("woff2")}
+@font-face{font-family:"HBSite";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/roboto-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"HBSite";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/roboto-cyrillic-700-normal.woff2") format("woff2")}
+@font-face{font-family:"HBSite";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/roboto-latin-700-normal.woff2") format("woff2")}
 *{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f1f3f7;color:#1c2330;margin:0;padding:0;line-height:1.55}
+body{font-family:"HBSite",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f1f3f7;color:#1c2330;margin:0;padding:0;line-height:1.55}
 .wrap{max-width:880px;margin:0 auto;padding:16px 14px 60px}
 header.top{background:linear-gradient(135deg,#1a3a6b,#2f62b0);color:#fff;border-radius:14px;padding:22px 20px;margin:14px 0 16px}
 header.top h1{margin:0 0 8px;font-size:21px}
@@ -15,6 +22,7 @@ header.top p{margin:4px 0;font-size:14px;opacity:.95}
 .toolbar{position:sticky;top:0;z-index:50;background:#fff;border:1px solid #dde3ec;border-radius:12px;padding:10px 12px;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 10px rgba(20,40,80,.07)}
 .progress{font-size:13px;font-weight:600;color:#2f62b0;margin-right:auto}
 button{cursor:pointer;border:none;border-radius:10px;padding:11px 16px;font-size:14px;font-weight:700}
+button,select,input{font-family:inherit}
 .btn-check{background:#1f9d55;color:#fff}
 .btn-check:hover{background:#178244}
 .btn-dl{background:#2f62b0;color:#fff}
@@ -72,7 +80,7 @@ section[hidden]{display:none}
 <span class="progress" id="progress">Вкладка 1 — отвечено: 0 / 45</span>
 <button class="btn-check" onclick="checkTest(activeTab)">✅ Проверить</button>
 <button class="btn-dl" onclick="downloadResults(activeTab)">⬇️ Скачать результаты</button>
-<button class="btn-reset" onclick="resetTest(activeTab)">↺ Сбросить</button>
+<button class="btn-reset" onclick="resetTest(activeTab)">Сбросить</button>
 </div>
 
 <noscript>
@@ -560,7 +568,7 @@ section[hidden]{display:none}
 <span class="progress">Вкладка 1. Готовы? Нажмите «Проверить»</span>
 <button class="btn-check" onclick="checkTest(1)">✅ Проверить</button>
 <button class="btn-dl" onclick="downloadResults(1)">⬇️ Скачать результаты</button>
-<button class="btn-reset" onclick="resetTest(1)">↺ Сбросить</button>
+<button class="btn-reset" onclick="resetTest(1)">Сбросить</button>
 </div>
 
 
@@ -697,7 +705,7 @@ section[hidden]{display:none}
 <div class="verdict"></div>
 </div>
 
-<div class="q" data-type="order" data-n="18" data-orig="Сборник В1" data-exact="ГАБВ" data-correct-text="ГАБВ (Г—Туров, 980 → А—Витебск и Усвяты, 1021 → Б—Всеслав, 1044 → В—монголо-татары, ~1240)">
+<div class="q" data-type="order" data-n="18" data-orig="Сборник В1" data-exact="ГАБВ" data-correct-text="ГАБВ (Г—Туров, 980 -> А—Витебск и Усвяты, 1021 -> Б—Всеслав, 1044 -> В—монголо-татары, ~1240)">
 <h3>18. Установите последовательность событий. Ответ запишите в виде сочетания букв. Например: ГАБВ.</h3>
 <div class="meta"><span>Сборник · Часть В</span> · впишите буквы кириллицей подряд</div>
 <div class="ord"><b>А)</b> Присоединение к Полоцкому княжеству городов Витебск и Усвяты</div><div class="ord"><b>Б)</b> начало княжения Всеслава Брячиславича в Полоцке</div><div class="ord"><b>В)</b> вторжение на Берестейщину войска монголо-татар</div><div class="ord"><b>Г)</b> первое упоминание о Турове в летописи</div>
@@ -705,7 +713,7 @@ section[hidden]{display:none}
 <div class="verdict"></div>
 </div>
 
-<div class="q" data-type="order" data-n="19" data-orig="Сборник В1" data-exact="ГВБА" data-correct-text="ГВБА (Г—Туров, 980 → В—Глеб в Менске, 1101 → Б—поход Мстислава, 1127 → А—монголо-татары, ~1240)">
+<div class="q" data-type="order" data-n="19" data-orig="Сборник В1" data-exact="ГВБА" data-correct-text="ГВБА (Г—Туров, 980 -> В—Глеб в Менске, 1101 -> Б—поход Мстислава, 1127 -> А—монголо-татары, ~1240)">
 <h3>19. Установите последовательность событий. Ответ запишите в виде сочетания букв. Например: ГВБА.</h3>
 <div class="meta"><span>Сборник · Часть В</span> · впишите буквы кириллицей подряд</div>
 <div class="ord"><b>А)</b> Вторжение на Берестейщину войска монголо-татар</div><div class="ord"><b>Б)</b> поход киевского князя Мстислава и семи русских князей на Полоцкую землю</div><div class="ord"><b>В)</b> начало княжения Глеба Всеславича в Менске (Минске)</div><div class="ord"><b>Г)</b> первое упоминание в летописи о Турове</div>
@@ -826,7 +834,7 @@ section[hidden]{display:none}
 <span class="progress">Вкладка 2. Готовы? Нажмите «Проверить»</span>
 <button class="btn-check" onclick="checkTest(2)">✅ Проверить</button>
 <button class="btn-dl" onclick="downloadResults(2)">⬇️ Скачать результаты</button>
-<button class="btn-reset" onclick="resetTest(2)">↺ Сбросить</button>
+<button class="btn-reset" onclick="resetTest(2)">Сбросить</button>
 </div>
 
 </section>
